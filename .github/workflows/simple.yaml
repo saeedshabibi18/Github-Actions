@@ -1,0 +1,11 @@
+name: pipeline
+on: 
+  push: [main]
+
+jobs:
+  name:  display hello  
+
+  steps:
+    - name: dislaying hello
+      echo " hello world "
+      
