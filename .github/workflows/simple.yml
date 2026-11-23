@@ -1,12 +1,16 @@
+
 name: hello
 
-on: [main]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  runs-on: ubuntu-latest
-  name: display hello
-  steps:
-    - name: display name
-      echo "hello"
-    
-    
+  hello-job:
+    name: Display Hello
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display name
+        run: echo "hello"
